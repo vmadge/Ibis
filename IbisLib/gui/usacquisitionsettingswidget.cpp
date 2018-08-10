@@ -204,7 +204,7 @@ void UsAcquisitionSettingsWidget::on_calibrationMatrixButton_toggled( bool check
     if( checked )
     {
         Q_ASSERT( !m_calibrationMatrixWidget );
-        m_calibrationMatrixWidget = new vtkQtMatrixDialog( true, 0 );
+        m_calibrationMatrixWidget = new vtkQtMatrixDialog( false, 0 );
         m_calibrationMatrixWidget->setAttribute( Qt::WA_DeleteOnClose );
         m_calibrationMatrixWidget->SetMatrix( m_acquisitionObject->GetCalibrationTransform()->GetMatrix() );
         m_calibrationMatrixWidget->setWindowTitle( m_acquisitionObject->GetName() + QString(" Calibration Matrix") );
